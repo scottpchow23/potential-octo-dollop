@@ -21,6 +21,10 @@ namespace HelloWorld.Droid
 			Button button = FindViewById<Button>(Resource.Id.myButton);
 
 			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+
+			Button button2 = FindViewById<Button>(Resource.Id.button2);
+
+			button2.Click += delegate { StartActivity(typeof(SecondActivity)); };
 		}
 	}
 }
